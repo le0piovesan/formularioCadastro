@@ -1,0 +1,75 @@
+﻿@model FormularioCadastro.Models.DbFormulario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<hr />
+<div class="container">
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="id_usuario" />
+        <div class="row">
+            <div class="d-flex align-items-center">
+                <input type="submit" value="Salvar" class="btn btn-info" />
+                <a asp-action="Index">Voltar</a>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label asp-for="nome" class="control-label">Nome</label>
+                    <input asp-for="nome" class="form-control" />
+                    <span asp-validation-for="nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="email" class="control-label">Email</label>
+                    <input asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="data_nascimento" class="control-label">Data de Nascimento</label>
+                    <input asp-for="data_nascimento" class="form-control" />
+                    <span asp-validation-for="data_nascimento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="rua" class="control-label">Rua</label>
+                    <input asp-for="rua" class="form-control" />
+                    <span asp-validation-for="rua" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label asp-for="num" class="control-label">Número</label>
+                    <input asp-for="num" class="form-control" />
+                    <span asp-validation-for="num" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="cidade" class="control-label">Cidade</label>
+                    <input asp-for="cidade" class="form-control" />
+                    <span asp-validation-for="cidade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="uf" class="control-label">UF</label>
+                    <input asp-for="uf" class="form-control" />
+                    <span asp-validation-for="uf" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="mensagem" class="control-label">Mensagem</label>
+                    <textarea asp-for="mensagem" class="form-control"></textarea>
+                    <span asp-validation-for="mensagem" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

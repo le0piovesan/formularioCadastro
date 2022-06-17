@@ -1,0 +1,71 @@
+﻿@model FormularioCadastro.Models.DbFormulario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="id_usuario" />
+    <input type="submit" value="Deletar" class="btn btn-danger" /> |
+    <a asp-action="Index">Voltar</a>
+</form>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-2">
+            Data de Nascimento
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                var date = Model.data_nascimento.ToShortDateString();
+            }
+            @Html.DisplayFor(modelItem => date)
+        </dd>
+        <dt class="col-sm-2">
+            Rua
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.rua)
+        </dd>
+        <dt class="col-sm-2">
+            Número
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.num)
+        </dd>
+        <dt class="col-sm-2">
+            Cidade
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+        <dt class="col-sm-2">
+            UF
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.uf)
+        </dd>
+        <dt class="col-sm-2">
+            Mensagem
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.mensagem)
+        </dd>
+    </dl>
+
+</div>

@@ -1,0 +1,53 @@
+* {
+    color: aliceblue;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 16px;
+}
+
+body {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+i {
+    font-size: 24px;
+}
+
+
+a, label, dt {
+    color: #0dcaf0;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.fa-file-pen{
+    color: gold;
+}
+
+.fa-circle-info{
+    color: cadetblue;
+}
+
+.fa-trash-can{
+    color: red;
+}
+
+.fa-solid:hover {
+    color: greenyellow;
+}
+
+th {
+    color: #0dcaf0;
+}
